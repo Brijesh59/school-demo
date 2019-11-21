@@ -23,5 +23,5 @@ const ParentSchema = new Schema({
 
 ParentSchema.index({ parentId: 1}, { unique: true })
 
-const ParentDetails = mongoose.model('parentdetails', ParentSchema)
-module.exports = ParentDetails
+const ParentModel = mongoose.model('parentdetails', ParentSchema)
+module.exports = ParentModel
