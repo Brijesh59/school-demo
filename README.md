@@ -14,9 +14,44 @@
   > username: 11111, password: 12345  <br />
   > username: 11112, password: 12345  <br />
   > username: 11119, password: 12345  <br />
-4. Login using any parent credentials, and you will be dirented to parent dashboard.
+4. Login using any parent credentials, and you will be redirected to parent dashboard.
 5. In parent dashboard, you can add a student using his/her credentials.
 6. Enter credentials for any student in login field of parent dashboard, to add student.
 7. After student is added to parent dashboard, just click on the student name to move to student's dashboard.
+
+## Schema design of parent
+
+```js
+{
+    parentId: {
+        type: String,
+        required: true
+    },
+    fatherName: String,
+    motherName: String,
+    fatherOccupation: String,
+    motherOccupation: String,
+    phoneNo: String,
+    nationality: String,
+    presentAddress: String,
+    permanentAddress: String,
+    childs: [ {
+        username: String,
+        password: String,
+        firstName: String
+    } ]
+}
+```
+Here, parentId is a unique field(checkout parent model for more details) & it will also be served as username for every parent.
+<br />
+childs is an array, containing list of students, with their username, password & firstName. firstName is stored here, not referenced to student database, because of two reasons:
+a) refrencing (relationship) decreases the performance, so if not necessary, should be avoided.
+b) we only need student name to show in parent dashboard, so we can store in parent database.
+
+## Features
+
+1. Student dashboard opens in a new page, when a student is clicked from parent's dashboard. It helps in persisting parent dashboard, so parent can switch back & forth. (check the logic for this in Parent Dashboard)
+2. Student dashboard is temporary, so when page with student dashboard reloads, parent dashboard is loaded.
+
 
 
