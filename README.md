@@ -44,7 +44,7 @@
 ```
 Here, parentId is a unique field(checkout parent model for more details) & it will also be served as username for every parent.
 <br />
-childs is an array, containing list of students, with their username, password & firstName. firstName is stored here, not referenced to student database, because of two reasons:
+childs is an array, containing list of students, with their username, password & firstName. firstName is stored here, not referenced to student database, because of two reasons: <br />
 a) refrencing (relationship) decreases the performance, so if not necessary, should be avoided.
 b) we only need student name to show in parent dashboard, so we can store in parent database.
 
