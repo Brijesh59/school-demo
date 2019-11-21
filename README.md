@@ -42,7 +42,7 @@
     } ]
 }
 ```
-Here, parentId is a unique field(checkout parent model for more details) & it will also be served as username for every parent.
+Here, parentId is a unique field(checkout [parent model](https://github.com/Brijesh59/school-demo/blob/master/server/models/parent.js) for more details) & it will also be served as username for every parent.
 <br />
 childs is an array, containing list of students, with their username, password & firstName. firstName is stored here, not referenced to student database, because of two reasons: <br />
 a) refrencing (relationship) decreases the performance, so if not necessary, should be avoided.
@@ -50,7 +50,7 @@ b) we only need student name to show in parent dashboard, so we can store in par
 
 ## Features
 
-1. Student dashboard opens in a new page, when a student is clicked from parent's dashboard. It helps in persisting parent dashboard, so parent can switch back & forth. (check the logic for this in Parent Dashboard)
+1. Student dashboard opens in a new page, when a student is clicked from parent's dashboard. It helps in persisting parent dashboard, so parent can switch back & forth. (check the logic for this in [Parent Dashboard](https://github.com/Brijesh59/school-demo/blob/master/client/src/Components/Parent/Dashboard.js))
 2. Student dashboard is temporary, so when page with student dashboard reloads, parent dashboard is loaded.
 
 
