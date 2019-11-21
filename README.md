@@ -3,7 +3,7 @@
 #### 1. Add Child to Parent Dashboard
 ![Add Child to Parent Dashboard](https://i.imgur.com/AX8xP1g.png)
 #### 2. Open Child Dashboard in a new tab
-![Open Child Dashboard in a new tab](https://i.imgur.com/H6pCIM9.png)
+![Open Child Dashboard in a new tab](https://i.imgur.com/hS3sj9K.png)
 
 ## Demo
 1. Open https://edfinix.herokuapp.com/
